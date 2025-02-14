@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sri Boutique - Bracelets </title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff6ec7, #6e45e2, #00bfff); /* Pink, Purple, Blue */
+            color: white;
+        }
+        header {
+            background: linear-gradient(to right, black, purple);
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .product {
+            background: white;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            text-align: center;
+            margin: 15px;
+            transition: transform 0.3s ease-in-out;
+            color: black;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: 250px;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .product p {
+            font-size: 18px;
+            color: purple;
+        }
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: red;
+        }
+        .buy-btn {
+            background: #ff6ec7;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .buy-btn:hover {
+            background: black;
+        }
+        #cart {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+        }
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>✨ Sri Boutique - Bracelets ✨</h1>
+</header>
+
+<!-- Shopping Cart -->
+<div id="cart">
+    <p>🛒 Your Cart: <span id="cart-items">0</span> items | Total: ₹<span id="cart-total">0</span></p>
+    <button onclick="checkout()" class="buy-btn">Proceed to Order</button>
+</div>
+
+
+    <!-- Bracelets -->
+<div class="product">
+        <img src="D:\sri boutique\r1.jpg" alt="Bracelet">
+        <h3>Friendship Bracelet (Pair - Black & White)</h3>
+        <p class="price">₹60</p>
+        <button onclick="addToCart('Friendship Bracelet (Black & White)', 60)" class="buy-btn">Buy Now</button>
+    </div>
+ <div class="product">
+        <img src="D:\sri boutique\r2.jpg" alt="Bracelet">
+        <h3>Friendship Magnetic Heart Bracelet</h3>
+        <p class="price">₹120</p>
+        <button onclick="addToCart('Friendship Magnetic Heart Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\r3.jpg" alt="Bracelet">
+        <h3>Friendship Magnetic Heart Bracelet</h3>
+        <p class="price">₹120</p>
+        <button onclick="addToCart('Friendship Magnetic Heart Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\r5.jpg" alt="Bracelet">
+        <h3>Friendship Magnetic Heart Bracelet</h3>
+        <p class="price">₹120</p>
+        <button onclick="addToCart('Friendship Magnetic Heart Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\r4.jpg" alt="Bracelet">
+        <h3>Friendship Magnetic Hand Bracelet</h3>
+        <p class="price">₹120</p>
+        <button onclick="addToCart('Friendship Magnetic Hand Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\r6.jpg" alt="Bracelet">
+        <h3>Friendship Magnetic Hand Bracelet</h3>
+        <p class="price">₹120</p>
+        <button onclick="addToCart('Friendship Magnetic Hand Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+
+ <div class="product">
+        <img src="D:\sri boutique\10.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w1.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w2.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w5.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w6.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w7.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w8.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w11.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w14.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w15.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w17.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w18.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w21.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+
+<div class="product">
+        <img src="D:\sri boutique\w3.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+
+<div class="product">
+        <img src="D:\sri boutique\w4.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w12.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w13.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w16.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w19.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\w21.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\q1.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹50</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div><div class="product">
+        <img src="D:\sri boutique\q3.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div><div class="product">
+        <img src="D:\sri boutique\q6.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div><div class="product">
+        <img src="D:\sri boutique\q11.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div><div class="product">
+        <img src="D:\sri boutique\q12.jpg" alt="Bracelet">
+        <h3> Beads Bracelet</h3>
+        <p class="price">₹40</p>
+        <button onclick="addToCart('Normal Beads Bracelet', 30)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\q2.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹50</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\q4.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹50</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\q5.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹50</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\q7.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹50</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div><div class="product">
+        <img src="D:\sri boutique\q8.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹50</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+<div class="product">
+        <img src="D:\sri boutique\q12.jpg" alt="Bracelet">
+        <h3>Cracked Beads Bracelet</h3>
+        <p class="price">₹50</p>
+        <button onclick="addToCart('Cracked Beads Bracelet', 40)" class="buy-btn">Buy Now</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Sri Boutique | All Rights Reserved</p>
+</footer>
+
+<script>
+    let cartItems = 0;
+    let cartTotal = 0;
+    let cartList = [];
+
+
+
+
+    function addToCart(item, price) {
+        cartItems++;
+        cartTotal += price;
+        cartList.push(${item} - ₹${price});
+        document.getElementById("cart-items").innerText = cartItems;
+        document.getElementById("cart-total").innerText = cartTotal;
+        alert(item + " added to cart!");
+    }
+
+    function checkout() {
+        if (cartItems === 0) {
+            alert("Your cart is empty!");
+            return;
+        }
+        let message = "I want to order:\n" + cartList.join("\n") + \nTotal: ₹${cartTotal};
+        let whatsappLink = https://wa.me/919940406369?text=${encodeURIComponent(message)};
+        window.location.href = whatsappLink;
+    }
+</script>
+
+</body>
+</html>
